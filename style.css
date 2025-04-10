@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#head1{
+    background: linear-gradient(to left, red, rgb(113, 113, 207));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#head1::before{
+    content: "🔥 ";
+    color: #F9D423;
+    font-size: 24px;
+}
+#head1::after{
+    content: "🔥 ";
+    color: #F9D423;
+    font-size: 24px;
+}
+
+.app {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+}
+
+.app h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.quiz h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#ans-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #11998e, #f6a40d);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+#next-btn{
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #43cea2, #189d1a);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s;
+    margin-top: 20px;
+}
+
+.correct {
+    background: linear-gradient(to right, green, lightgreen);
+}
+
+.incorrect {
+    background: linear-gradient(to right, red, orange);
+}
