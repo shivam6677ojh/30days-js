@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4A90E2, #50C9C3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 50px;
+    background: linear-gradient(140deg, blue, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+p {
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #4A90E2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #357ABD;
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.input-box {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ff5d5d;
+    border-radius: 5px;
+
+}
+
+.copy-btn {
+    padding: 10px;
+    font-size: 16px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #357ABD;
+}

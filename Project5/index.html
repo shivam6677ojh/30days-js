@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hour Countdown Timer</title>
+    <style>
+        body {
+            background: linear-gradient(to right, blue, red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 1rem;
+        }
+
+        #timeshow {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" placeholder="Enter time (HH:MM:SS)" id="time">
+        <button onclick="startTimer()">Start Timer</button>
+        <div id="timeshow"></div>
+    </div>
+
+    <script>
+        const timeInput = document.querySelector("#time");
+        const show = document.querySelector("#timeshow");
+        let timer;
+
+        function startTimer() {
+            clearInterval(timer); // Clear previous timer
+
+            const input = timeInput.value.trim();
+            const parts = input.split(":");
+
+            if (parts.length !== 3) {
+                show.innerHTML = "Please enter time in HH:MM:SS format";
+                return;
+            }
+
+            let [hours, minutes, seconds] = parts.map(Number);
+
+            if (
+                isNaN(hours) || isNaN(minutes) || isNaN(seconds) ||
+                hours < 0 || minutes < 0 || seconds < 0 ||
+                minutes > 59 || seconds > 59
+            ) {
+                show.innerHTML = "Invalid time format!";
+                return;
+            }
+
+            let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+            timer = setInterval(() => {
+                if (totalSeconds <= 0) {
+                    clearInterval(timer);
+                    show.innerHTML = "Time's up!";
+                    return;
+                }
+
+                let hrs = Math.floor(totalSeconds / 3600);
+                let mins = Math.floor((totalSeconds % 3600) / 60);
+                let secs = totalSeconds % 60;
+
+                show.innerHTML =
+                    `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+                totalSeconds--;
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

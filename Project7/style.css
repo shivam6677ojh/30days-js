@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #0072ff;
+    font-weight: bold;
+}
+
+.input-box {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="date"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #0072ff;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="date"]:focus {
+    border-color: #00c6ff;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005ecb;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+    background-color: #f1f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #0072ff;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
